@@ -7,6 +7,13 @@ public class GameWorld : ModuleRules
 	public GameWorld(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
+		PrivateIncludePaths.AddRange(new string[]
+		{
+            "GameWorld",
+            "GameWorld/Public/System",
+            "GameWorld/Private/System",
+        });
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
